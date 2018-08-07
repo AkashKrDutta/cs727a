@@ -1,0 +1,60 @@
+#main{
+  float: left;
+  padding: 0.25in 0.25in 0 0.25in;
+  font-size: 1em;
+}
+
+html *
+{
+   font-size: 1em;
+   color: #000  ;
+   font-family: Monaco !important;
+}
+
+.subtitle{
+  font-size: .9em;
+}
+
+#title h1{
+  font-weight: 300;
+  font-size: 18pt;
+  line-height: 1.2;
+}
+
+h1, h2, h3{
+  margin: 0;
+  color: #000;
+}
+
+h3{
+  font-size: .8em;
+}
+.place{
+  /*float: left;*/
+  font-size: .8em;
+}
+
+ h2 {
+  color: DarkSlateGray;
+}
+
+
+.subheading {
+  font-size: 1.2em;
+}
+
+table {
+    font-family: Monaco, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+tr {
+    background-color: #dddddd;
+}
