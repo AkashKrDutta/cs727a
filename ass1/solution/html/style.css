@@ -58,3 +58,7 @@ td, th {
 tr {
     background-color: #dddddd;
 }
+
+.zoom {
+    transition: transform .2s;
+}
