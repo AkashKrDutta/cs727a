@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+
+<center>
+    
+<h2>Student Personal Form</h2>
+<p><span class="error">* required field</span></p>
+<form name="myForm" action="./StudentPersonal.php" onsubmit="return validateForm()" method="post">
+Roll: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="froll"> <span class="error">*</span>
+<br>
+Father's Name: <input type="text" name="ffname"> <span class="error">*</span>
+<br>
+Mother's Name:  <input type="text" name="fmname"> <span class="error">*</span>
+<br>
+
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+type="submit" value="Submit"> </form>
+
+</center>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["froll"].value;
+    if (x == "") {
+        alert("Roll must be filled out");
+        return false;
+    }
+
+    var y = document.forms["myForm"]["ffname"].value;
+    if (y == "") {
+        alert("Father's Name must be filled out");
+        return false;
+    }
+
+    var z = document.forms["myForm"]["fmname"].value;
+    if (z == "") {
+        alert("Mother's Name must be filled out");
+        return false;
+    }
+} 
+</script>
+</body>
+</html>
+
+

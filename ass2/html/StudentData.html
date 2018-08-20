@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+<center>
+  
+<h2>Student Data Form</h2>
+<p><span class="error">* required field</span></p>
+<form name="myForm" action="./StudentData.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname"> <span class="error">*</span>
+<br>
+Age: &nbsp;<input type="text" name="fage"> <span class="error">*</span>
+<br>
+Roll: <input type="text" name="froll"> <span class="error">*</span>
+<br>
+
+&nbsp; &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">
+</form> 
+
+</center> 
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+
+    var y = document.forms["myForm"]["fage"].value;
+    if (y == "") {
+        alert("Age must be filled out");
+        return false;
+    }
+
+    var z = document.forms["myForm"]["froll"].value;
+    if (z == "") {
+        alert("Roll must be filled out");
+        return false;
+    }
+} 
+</script>
+</body>
+</html>
+
+
