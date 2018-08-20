@@ -31,6 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
+<button type="button" onclick="location.href = './index.html';">Close</button>
+
+
 </body>
 </html>
 
