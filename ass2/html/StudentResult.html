@@ -32,16 +32,45 @@ function validateForm() {
         return false;
     }
 
+    if (x.length > 20)
+    {
+      alert("Roll must be less than 20 chars");
+      return false;
+    }
+
+    if(!x.match(/^[A-Z0-9]/i))
+    {
+       alert("Roll can only start with alpha numberic characters");
+       return false;
+    }
+
     var y = document.forms["myForm"]["fpercent"].value;
     if (y == "") {
         alert("Percent must be filled out");
         return false;
+    }
+    if (isNaN(y))
+    {
+      alert("Percent must be a valid number");
+      return false;
+    }
+    yTemp = parseInt(y);
+    if (yTemp > 100 || yTemp < 0)
+    {
+      alert("Percent must be between 0 to 100 inclusive");
+      return false;
     }
 
     var z = document.forms["myForm"]["fclass"].value;
     if (z == "") {
         alert("Class Name must be filled out");
         return false;
+    }
+
+    if (z.length > 20)
+    {
+      alert("Class Name must be less than 20 chars");
+      return false;
     }
 } 
 </script>

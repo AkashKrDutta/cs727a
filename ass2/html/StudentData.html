@@ -28,8 +28,19 @@ Roll: <input type="text" name="froll"> <span class="error">*</span>
 function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
     if (x == "") {
-        alert("Name must be filled out");
-        return false;
+      alert("Name must be filled out");
+      return false;
+    }
+    if (x.length > 20)
+    {
+      alert("Name must be less than 20 chars");
+      return false;
+    }
+
+    if(!x.match(/^[A-Z]/i))
+    {
+       alert("Name can only start with alpha characters");
+       return false;
     }
 
     var y = document.forms["myForm"]["fage"].value;
@@ -38,10 +49,46 @@ function validateForm() {
         return false;
     }
 
+    if (isNaN(y))
+    {
+      alert("Age must be a valid number");
+      return false;
+    }
+
+    if (!y.match(/^\d+$/))
+    {
+        alert("Age must be a positive Integer!");
+        return false;
+    }
+    yTemp = parseInt(y);
+    if (yTemp > 150)
+    {
+      alert("Age is too large, are you a super human? :P !");
+      return false;
+    }
+
+    if (yTemp <= 0)
+    {
+      alert("Age is not positive, born yet? :P !");
+      return false;
+    }
+
     var z = document.forms["myForm"]["froll"].value;
     if (z == "") {
         alert("Roll must be filled out");
         return false;
+    }
+
+    if (z.length > 10)
+    {
+      alert("ROll must be less than 10 chars");
+      return false;
+    }
+
+    if(!z.match(/^[A-Z0-9]/i))
+    {
+       alert("Roll can only start with alpha numberic characters");
+       return false;
     }
 } 
 </script>

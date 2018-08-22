@@ -34,16 +34,52 @@ function validateForm() {
         return false;
     }
 
+    if (x.length > 20)
+    {
+      alert("Roll must be less than 20 chars");
+      return false;
+    }
+
+    if(!x.match(/^[A-Z0-9]/i))
+    {
+       alert("Roll can only start with alpha numberic characters");
+       return false;
+    }
+
     var y = document.forms["myForm"]["ffname"].value;
     if (y == "") {
         alert("Father's Name must be filled out");
         return false;
     }
 
+    if (y.length > 20)
+    {
+      alert("Father's Name must be less than 20 chars");
+      return false;
+    }
+
+    if(!y.match(/^[A-Z]/i))
+    {
+       alert("Father's Name can only start with alpha characters");
+       return false;
+    }
+
     var z = document.forms["myForm"]["fmname"].value;
     if (z == "") {
         alert("Mother's Name must be filled out");
         return false;
+    }
+
+    if (z.length > 20)
+    {
+      alert("Mother's Name must be less than 20 chars");
+      return false;
+    }
+
+    if(!z.match(/^[A-Z]/i))
+    {
+       alert("Mpther's Name can only start with alpha characters");
+       return false;
     }
 } 
 </script>
