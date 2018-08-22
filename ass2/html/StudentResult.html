@@ -6,23 +6,25 @@
 </head>
 </head>
 <body>  
-
-
-<center>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./StudentData.html">StudentData</a></li>
+      <li><a href="./StudentPersonal.html">StudentPersonal</a></li>
+      <li><a href="./StudentResult.html">StudentResult</a></li>
+    </ul>
     
 <h2>Student Result Form</h2>
 <p><span class="error">* required field</span></p>
 <form name="myForm" action="./StudentResult.php" onsubmit="return validateForm()" method="post">
-Roll: &nbsp;&nbsp;&nbsp;<input type="text" name="froll"> <span class="error">*</span>
+Roll: <br><input type="text" name="froll"> <span class="error">*</span>
 <br>
-Percent: <input type="text" name="fpercent"> <span class="error">*</span>
+Percent: <br><input type="text" name="fpercent"> <span class="error">*</span>
 <br>
-Class: &nbsp; <input type="text" name="fclass"> <span class="error">*</span>
+Class:  <br><input type="text" name="fclass"> <span class="error">*</span>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+<input
 type="submit" value="Submit"> </form>
 
-</center>
 
 <script>
 function validateForm() {

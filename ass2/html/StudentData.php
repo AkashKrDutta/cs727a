@@ -1,9 +1,7 @@
 <!DOCTYPE html>  
 <html>
 <head>
-<style>
-.error {color: #FF0000;}
-</style>
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>  
 
