@@ -3,14 +3,14 @@ cat << EOF | mysql --user=$1 --password
 CREATE DATABASE $2;
 use $2;
 CREATE TABLE StudentData (
-Name VARCHAR(30) NOT NULL,
+Name VARCHAR(20) NOT NULL,
 age INTEGER NOT NULL,
 Roll VARCHAR(10) PRIMARY KEY
 );
 CREATE TABLE StudentPersonal (
 Roll VARCHAR(20) PRIMARY KEY,
-FatherName VARCHAR(30) NOT NULL,
-MotherName VARCHAR(30) NOT NULL
+FatherName VARCHAR(20) NOT NULL,
+MotherName VARCHAR(20) NOT NULL
 );
 CREATE TABLE StudentResult (
 Roll VARCHAR(20) PRIMARY KEY,
