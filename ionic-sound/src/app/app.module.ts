@@ -1,5 +1,7 @@
 import { Media } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,7 +32,8 @@ import { HomePage } from '../pages/home/home';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Media,
-    File
+    File,
+    Base64ToGallery
   ]
 })
 export class AppModule {}

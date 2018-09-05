@@ -28,7 +28,8 @@ export class HomePage {
 	private media: Media,
 	private file: File,
 	public platform: Platform,
-	private camera:Camera) {}
+	private camera:Camera,
+	private base64ToGallery: Base64ToGallery) {}
 
   options: CameraOptions = {
     quality: 100,
@@ -47,6 +48,11 @@ export class HomePage {
   takePhoto(){
     this.camera.getPicture(this.options).then((imageData) => {
        this.imageURL = 'data:image/jpeg;base64,' + imageData;
+       this.base64ToGallery.base64ToGallery(imageData, { prefix: '_img', mediaScanner: true }).then(
+	   res => console.log('Saved image to gallery ', res),
+	   err => console.log('Error saving image to gallery ', err)
+	   );
+
     }, (err) => {
        console.log(err);
     });
