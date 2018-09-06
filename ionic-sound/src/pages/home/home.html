@@ -1,31 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Sound Recorder & Player
-    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The Ultimate Detective</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card>
-    <ion-card-content>
-      <ion-card-title>
-        <button ion-button primary (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off"></ion-icon>&nbsp;&nbsp;Stop Record</button>
-        <button ion-button primary (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Start Record</button>
-      </ion-card-title>
-    </ion-card-content>
-  </ion-card>
-  
-
-<ion-content padding>
-<button ion-button color="dark" (click)="takePhoto()">Take Photo</button>
-<img [src]="imageURL" *ngIf="imageURL" />
-</ion-content>
-
-  <ion-list>
-    <ion-item *ngFor="let audio of audioList; index as i;">
-      <p>{{audio.filename}}</p>
-      <button ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
-    </ion-item>
-  </ion-list>
+<ion-content id="id" padding>
+     <button ion-button block [navPush]="soundPage">Record an Audio!</button>
+     <button ion-button block [navPush]="cameraPage">Take a Picture!</button>
+     <ion-img id="img" width="100%" height="50%" src="../../assets/imgs/sherlock.jpg"></ion-img>
 </ion-content>

@@ -12,11 +12,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { CameraPage } from '../pages/camera/camera';
+import { SoundPage } from '../pages/sound/sound';
+
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CameraPage,
+    SoundPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,9 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    CameraPage,
+    SoundPage
   ],
   providers: [
     StatusBar,
